@@ -1,0 +1,152 @@
+//@import "../node_modules/bootstrap/scss/bootstrap";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+body{
+    font-size: 18px;
+    background: url(../img/bg.jpg) no-repeat center;
+    background-size: cover;
+    .body-bg{
+        background: rgba(0,0,0,.8);
+        #header{
+            background: url(../img/dibujo1.svg) no-repeat center;
+            background-size: cover;
+            .container{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                height: 100vh;
+                .left{
+                    display: grid;
+                    grid-template-columns: 1fr 4fr;
+                    nav{
+                        a{
+                            display: block;
+                            text-decoration: none;
+                            font-size: 1.2em;
+                            text-align: center;
+                            padding: .5em;
+                            color: white;
+                            margin: 1em 0em;
+                            transition: transform 1s;
+                            &:hover{
+                                transform: translateY(-10px);
+                            }
+
+                        }
+                    }
+                    .content-left{
+                        text-align: center;
+                        padding: 2.5em;
+                        h2{
+                            color: white;
+                            margin: 1em 0em;
+                        }
+                        form{
+                            .form-group{
+                                input{
+                                    width: calc(100% - 1em);
+                                    margin: .6em 0em;
+                                    height: 30px;
+                                    border-radius: 5px;
+                                    border: none;
+                                    padding: 1em;
+                                    outline: none;
+                                }
+                            }
+                            .login{
+                                border: none;
+                                background: white;
+                                border-radius: 5px;
+                                width: calc(100% - 3em);
+                                height: 30px;
+                            }
+                        }
+                    }
+
+                }
+                .right{
+                    color: white;
+                    text-align: center;
+                    display: grid;
+                    padding: 2em;
+                    h1{
+                        font-size: 3.4em;
+                        span{
+                            color: #c5305bff;
+                        }
+                    }
+                    p{
+                        padding: 1.5em;
+                    }
+                    button{
+                        background:  -webkit-linear-gradient(160deg, #d2435fff 0%, #b71c57ff 100%);
+                        border: none;
+                        color: white;
+                        font-size: 1.2em;
+                        width: calc(100% - 4em);
+                        margin-left: 30px;
+                        outline: none;
+                        cursor: pointer;
+                        border-radius: 40px;
+                        height: 1.7em;
+                        transition: transform 1s;
+                        &:hover{
+                            transform: translateY(-10px);
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+@media(min-width: 1600px){
+    .right{
+        p{
+            padding: 1.5em !important;
+            font-size: 1.3em !important;
+        }
+        button{
+            height: 2em !important;
+        }
+    }
+    .left{
+        grid-template-columns: 1fr !important ;
+        nav{
+            a{
+                display: inline-block !important;
+            }
+        }
+        .content-left{
+            form{
+                .form-group{
+                    input{
+                        width: calc(100% - 3em) !important;
+                        margin: .6em 0em;
+                        height: 35px !important;
+                    }
+                }
+                .login{
+                    width: calc(100% - 4em) !important;
+                    font-size: 1em;
+                    height: 30px !important;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 810px){
+    body{
+        .body-bg{
+            #header{
+                background: none !important;
+                .container{
+                    grid-template-columns: 1fr !important;
+                }
+            }  
+        }
+    }
+}
